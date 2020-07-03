@@ -1,0 +1,52 @@
+\documentclass{beamer}
+
+% No "Figure:" prefix for image captions
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+
+% Define appearance of the slides
+\usetheme{Warsaw}
+\usecolortheme{spruce}
+
+\definecolor{ming}{HTML}{417E8C}
+
+% Some themes don't include the slide number
+\setbeamerfont{page number in head/foot}{size=\small}
+\setbeamercolor{page number in head/foot}{fg=ming}
+\setbeamertemplate{footline}[frame number]
+
+\setbeamercolor{itemize item}{fg=ming}
+\setbeamertemplate{itemize item}[circle]
+
+% No navigation symbols at the slides' bottom
+\beamertemplatenavigationsymbolsempty
+
+% Insert a pause after every item.
+% Show an item immediately by adding <.->
+\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+\frame{
+  \frametitle{A test with images}
+  \framesubtitle{The image appears with the third item}
+  \begin{minipage}{0.5\textwidth}
+    \begin{itemize}
+      \item don't show the image yet
+      \item wait for it...
+      \item show the image now
+      \item keep showing the image
+      \item keep showing the image still
+    \end{itemize}
+  \end{minipage} \hfill
+  \begin{minipage}{0.45\textwidth}
+    % Show the image at item three and afterwards
+    %\uncover<3->{
+      \begin{figure}
+        % From https://i.imgur.com/AyzVOIO.jpg
+        \includegraphics[height=0.9\textwidth]{93236898_668235550645312_2911944065266221056_n.jpg}
+        \caption{here's the image!}
+      \end{figure}
+    %}
+  \end{minipage}
+}
+\end{document}
